@@ -1,0 +1,5 @@
+{
+  "name": "Copy of MinFruit Manager v4.0",
+  "description": "Sistema integral para la gestión, trazabilidad y control de rendimiento de fruta fresca. Incluye recepción, proceso, inventario FIFO y despacho.",
+  "requestFramePermissions": []
+}

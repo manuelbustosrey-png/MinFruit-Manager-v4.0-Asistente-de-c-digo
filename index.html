@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rio Donguil Manager v2.0</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#2e7d32', // Green 800
+              secondary: '#81c784', // Green 300
+              accent: '#f59e0b', // Amber 500
+              blueberry: '#2563eb', // Blue 600
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Desktop App Feel: Disable rubber-banding */
+      body {
+        overscroll-behavior: none;
+      }
+      
+      /* Custom Scrollbar for Webkit */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+
+      /* Hide spin buttons for Chrome, Safari, Edge, Opera */
+      input[type=number]::-webkit-inner-spin-button, 
+      input[type=number]::-webkit-outer-spin-button { 
+        -webkit-appearance: none; 
+        margin: 0; 
+      }
+      /* Hide spin buttons for Firefox */
+      input[type=number] {
+        -moz-appearance: textfield;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "recharts": "https://aistudiocdn.com/recharts@^3.4.1",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-50 text-gray-900 antialiased h-screen overflow-hidden">
+    <div id="root" class="h-full"></div>
+    <script>
+      // Prevent mouse wheel from changing number input values
+      document.addEventListener("wheel", function(event) {
+        if (document.activeElement.type === "number") {
+          document.activeElement.blur();
+        }
+      });
+    </script>
+  </body>
+</html>
